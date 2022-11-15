@@ -41,4 +41,47 @@ const reviews = [
 
 let index =0;
 
+function pre()
+{
+  if(index <=0)
+  {
+    index= 0
+  }
+  else
+  {
 
+  index = index -1;
+  }
+
+  display();
+
+}
+
+function next()
+{
+  if(index >= reviews.length -1)
+  {
+    index = 0;
+  }
+  else
+  {
+  index = index +1;
+  }
+
+  display();
+
+}
+
+function display()
+{
+  document.getElementById("person-img").src = reviews[index].img;
+  document.getElementById("author").innerHTML = reviews[index].name;
+  document.getElementById("job").innerHTML = reviews[index].job;
+  document.getElementById("info").innerHTML = reviews[index].text;
+
+
+
+}
+
+
+display();
