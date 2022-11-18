@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Strings</h1>
-<h2>The matchAll() Method</h2>
 
-<p>ES2020 intoduced the string method matchAll().</p>
+<h2>JavaScript Functions</h2>
 
-<p id="demo"></p>
+<p>Outside myFunction() carName is undefined.</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
 
 <script>
-let text = "I love cats. Cats are very easy to love. Cats are very popular."
-const iterator = text.includes("CATS");
+myFunction();
 
-console.log(iterator);
+function myFunction() {
+  var carName = "Volvo";
+  document.getElementById("demo1").innerHTML =
+  typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML =
+typeof carName;
 </script>
 
 </body>
