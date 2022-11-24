@@ -81,30 +81,24 @@ const menu = [
   },
 ];
 
-let index = 0;
 
-function next()
+function displayButton()
 {
-  index = index +1;
+    let category = menu.map(function(value){
 
-  display();
+      return value.category;
 
+      
+    })
+
+   let mybutton = category.map(function(value) {
+
+    return `<button class="filter-btn">${value}</button>`
+   });
+
+   document.getElementById("buttonc").innerHTML = mybutton.join("");
+
+   console.log(mybutton);
 }
 
-function prev()
-{
-  index = index -1;
-
-  display();
-}
-
-function display()
-{
-  document.getElementById("menuimg").src = menu[index].img;
-  document.getElementById("menuitem").innerHTML = menu[index].title;
-  document.getElementById("menuprice").innerHTML = menu[index].price;
-  document.getElementById("menudes").innerHTML = menu[index].desc;
- 
-
-
-}
+displayButton();
