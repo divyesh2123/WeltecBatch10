@@ -11,18 +11,17 @@
     <script>
 
 
-const numbers = [45, 4, 9, 16, 25];
+const numbers = [1,2,3,4,4];
 
-let mydata = numbers.reduce(function(pre,value,index,array) {
+let numbervalue = numbers.
+reduceRight(function(pre,value){
 
-    console.log("previos value" + pre);
-    console.log("currentvalue" + value);
+    console.log("pre"+pre);
+    console.log("curr"+ value);
 
-    return pre*2;
-})
+},0)
 
-
-
+console.log(d);
 
     </script>
     
