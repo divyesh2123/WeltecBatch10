@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript const</h2>
+
+<p>Declaring a constant array does NOT make the elements unchangeable:</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an Array:
+const cars = [1,2,1,2,1];
+
+const myEmployee = [ {
+    employeeId : "1",
+    empoyeeName : "test"
+},
+
+{
+    employeeId : "1",
+    empoyeeName : "test"
+},
+
+{
+    employeeId : "1",
+    empoyeeName : "test"
+},
+
+{
+    employeeId : "2",
+    empoyeeName : "tes1"
+}]
+
+const mydata = cars.reduce(function(pre,value) {
+
+    if(!pre.includes(value))
+    {
+        pre.push(value);
+    }
+
+    return pre;
+
+},[])
+
+console.log(mydata);
+ 
+</script>
+
+</body>
+</html>

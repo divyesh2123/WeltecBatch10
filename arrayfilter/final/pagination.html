@@ -9,7 +9,9 @@
 <body>
 
     <table id="displaydata"></table>
+    <div><button>Pre</button></div>
     <div id="displaybutton"></div>
+    <div><button onclick="nextButton()">Next</button></div>
     <script>
 
         let mydata = [
@@ -1227,6 +1229,8 @@
   }
 ];
 
+let myIndex =5;
+
 function displayData(start,end)
 {
  let t =   mydata.slice(start,end).map(function(value) {
@@ -1240,28 +1244,35 @@ function displayData(start,end)
 }
 
 
-displayData(0,20);
+function nextButton()
+{
+  displayButton(myIndex+1,myIndex+1+5);
 
-  function displayButton()
+}
+
+displayData(0,5);
+
+  function displayButton(start,end)
   {
-    let perPage = 20;
+    document.getElementById("displaybutton").innerHTML = "";
+    let perPage = 5;
     let myLength = mydata.length;
     let numberofPages = Math.ceil(myLength/perPage);
 
-    for (let index = 1; index <= numberofPages; index++) {
+    for (let index = start; index <= end; index++) {
      
         document.getElementById("displaybutton").innerHTML +=`<button onclick=myPagination('${index}')>${index}</button>`
     }
   }
 
-  displayButton();
+  displayButton(1,5);
 
   function myPagination(currentpage)
   {
 
-    let start = (currentpage-1)*20
+    let start = (currentpage-1)*5
 
-    let end =  start +20;
+    let end =  start +5;
     displayData(start,end);
   }
 

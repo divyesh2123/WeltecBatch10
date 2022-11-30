@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML DOM Attributes</h1>
+<h2>The length Property</h2>
+
+<img id="myImg" alt="Flower" src="klematis.jpg" width="150" height="113">
+
+<p>The number of attributes of the image are:</p>
+
+<p id="demo"></p>
+
+<script>
+let num = document.getElementById("myImg").attributes;
+
+console.log(num);
+document.getElementById("demo").innerHTML = num;
+</script>
+
+</body>
+</html>
