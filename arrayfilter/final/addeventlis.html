@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+    <div id="p">Thisi s</div>
+    <button id="btnarrow" name="45" >ArrowClick</button>
+    <button id="btnnormal" name="14" >Normal Click</button>
+    <script>
+
+        class display { 
+
+            name =4;
+
+             myname(params) {
+                document.getElementById("display").innerHTML += this.name;
+            }
+
+            arrowFunction = ()=> {
+
+document.getElementById("display").innerHTML += this.name;
+
+}
+
+
+
+        }
+
+        
+        let d = new display();
+           
+
+    
+
+ 
+            
+        
+
+       
+
+
+document.getElementById("btnarrow").addEventListener("click",d.arrowFunction);
+document.getElementById("btnnormal").addEventListener("click",d.myname);
+
+
+    </script>
+
+
+</body>
+</html>
