@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+.democlass {
+  color: red;
+}
+</style>
+
+<body>
+<h1 class="democlass">The Element Object</h1>
+<h2>The getAttributeNode() Method</h2>
+
+<p>The value of the class attribute node of the first h1 element is:</p>
+<p id="demo"></p>
+
+<script>
+const element = document.getElementsByTagName("H1")[0];
+const attr = element.getAttributeNode("class");
+
+console.log(attr);
+document.getElementById("demo").innerHTML = attr;
+</script>
+
+</body>
+</html>
