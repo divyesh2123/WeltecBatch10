@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a>Login</a>
+    <a>Register</a>
+    <a>Dashboard</a>
+    <script>
+        let d = JSON.parse(localStorage.getItem("token"));
+
+        fetch("http://localhost:4000/accounts", {
+            method: 'Delete',
+            headers: {
+
+                "Authorization" : "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2Mjc0NWY2MjdmZTQ1NDcwYWNhZDc4M2EiLCJpZCI6IjYyNzQ1ZjYyN2ZlNDU0NzBhY2FkNzgzYSIsImlhdCI6MTY3MTU5ODU1MSwiZXhwIjoxNjcxNTk5NDUxfQ.YYjn9n8wHm5pvKdEkRVRr6y76OF3oBqDKpECGuB6hws",
+                "t" : "dddd"
+            }
+           
+        }).then(y=>y.json()).then(y=> {
+            console.log(y)
+        }).catch(p=> {
+            console.log(p);
+        })
+
+    </script>
+</body>
+</html>
