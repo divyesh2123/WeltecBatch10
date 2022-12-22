@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+<p>Let AJAX change this text.</p>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    alert("This is inside");
+    console.log(this);
+    document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
+  }
+  xhttp.open("GET", "https://jsonplaceholder.typicode.com/users");
+  xhttp.send();
+
+  alert("This is the data")
+}
+</script>
+
+</body>
+</html>
